@@ -10,21 +10,20 @@
         <link rel="shortcut icon" href="{{ asset('app/images/logo.png') }}">
         <title>{{ config('app.name') }} | @yield('title')</title>
         <link rel="shortcut icon" href="dashboard/images/favicon.ico">
-
         <link rel="shortcut icon" type="image/x-icon" href="dashboard/img/favicon.png">
-        <link rel="stylesheet" href="dashboard/css/bootstrap.min.css">
-        <link rel="stylesheet" href="dashboard/css/font-awesome.min.css">
-        <link rel="stylesheet" href="dashboard/css/line-awesome.min.css">
-        <link rel="stylesheet" href="dashboard/plugins/alertify/alertify.min.css">
-        <link rel="stylesheet" href="dashboard/plugins/lightbox/glightbox.min.css">
-        <link rel="stylesheet" href="dashboard/plugins/c3-chart/c3.min.css">
-        <link rel="stylesheet" href="dashboard/plugins//toastr/toatr.css">
-        <link rel="stylesheet" href="dashboard/css/select2.min.css">
-        <link rel="stylesheet" href="dashboard/css/bootstrap-datetimepicker.min.css">
-        <link rel="stylesheet" href="dashboard/css/fullcalendar.min.css">
-        <link rel="stylesheet" href="dashboard/plugins/summernote/dist/summernote-bs4.css">
-        <link rel="stylesheet" href="dashboard/css/dataTables.bootstrap4.min.css">
-        <link rel="stylesheet" href="dashboard/css/style.css">
+        <link rel="stylesheet" href="{{asset('dashboard/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/css/font-awesome.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/css/line-awesome.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/plugins/alertify/alertify.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/plugins/lightbox/glightbox.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/plugins/c3-chart/c3.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/plugins//toastr/toatr.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/css/select2.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/css/bootstrap-datetimepicker.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/css/fullcalendar.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/plugins/summernote/dist/summernote-bs4.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/css/dataTables.bootstrap4.min.css')}}">
+        <link rel="stylesheet" href="{{asset('dashboard/css/style.css')}}">
         @livewireStyles
         @yield('styles')
     </head>
@@ -47,19 +46,19 @@
                 </div>
             </div>
         </body>
-    <script src="dashboard/js/jquery-3.6.0.min.js"></script>
-    <script src="dashboard/js/bootstrap.bundle.min.js"></script>
-    <script src="dashboard/js/jquery.slimscroll.min.js"></script>
-    <script src="dashboard/js/select2.min.js"></script>
-    <script src="dashboard/js/moment.min.js"></script>
-    <script src="dashboard/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="dashboard/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
-    <script src="dashboard/js/jquery-ui.min.js"></script>
-    <script src="dashboard/js/fullcalendar.min.js"></script>
-    <script src="dashboard/js/jquery.fullcalendar.js"></script>
-    <script src="dashboard/js/jquery.dataTables.min.js"></script>
-    <script src="dashboard/js/dataTables.bootstrap4.min.js"></script>
-    <script src="dashboard/js/validation.init.js"></script>
-    <script src="dashboard/js/app.js"></script>
+    <script src="{{asset('dashboard/js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/jquery.slimscroll.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/select2.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/moment.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/bootstrap-datetimepicker.min.js')}}"></script>
+    <script src="{{asset('dashboard/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/jquery-ui.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/fullcalendar.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/jquery.fullcalendar.js')}}"></script>
+    <script src="{{asset('dashboard/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('dashboard/js/validation.init.js')}}"></script>
+    <script src="{{asset('dashboard/js/app.js')}}"></script>
     @livewireScripts
 </html>

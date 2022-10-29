@@ -1,7 +1,7 @@
 <div class="header">
             <div class="header-left">
                 <a href="{{route('home')}}" class="logo">
-                    <img src="assets/img/logo.png" width="40" height="40" alt="">
+                    <img src="{{asset('assets/img/logo.png')}}" width="40" height="40" alt="">
                 </a>
             </div>
             <a id="toggle_btn" href="javascript:void(0);">
@@ -13,7 +13,7 @@
             </a>
 
             <div class="page-title-box">
-                <h3>PayRollSoft fintch</h3>
+                <h3></h3>
             </div>
 
             <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa fa-bars"></i></a>
@@ -35,14 +35,14 @@
 
                 <li class="nav-item dropdown has-arrow flag-nav">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
-                        <img src="assets/img/flags/fr.png" alt="" height="20"> <span>French</span>
+                        <img src="{{asset('assets/img/flags/fr.png')}}" alt="" height="20"> <span>French</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="assets/img/flags/us.png" alt="" height="16"> English
+                            <img src="{{asset('assets/img/flags/us.png')}}" alt="" height="16"> English
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="assets/img/flags/fr.png" alt="" height="16"> French
+                            <img src="{{asset('assets/img/flags/fr.png')}}" alt="" height="16"> French
                         </a>
                        
                     </div>
@@ -64,7 +64,7 @@
                                     <a href="activities">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt="" src="assets/img/profiles/avatar-02.jpg">
+                                                <img alt="" src="{{asset('assets/img/profiles/avatar-02.jpg')}}">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">John Doe</span> added
@@ -104,7 +104,7 @@
                                         <div class="list-item">
                                             <div class="list-left">
                                                 <span class="avatar">
-                                                    <img alt="" src="assets/img/profiles/avatar-09.jpg">
+                                                    <img alt="" src="{{asset('assets/img/profiles/avatar-09.jpg')}}">
                                                 </span>
                                             </div>
                                             <div class="list-body">
@@ -128,7 +128,7 @@
 
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                        <span class="user-img"><img src="assets/img/profiles/avatar-21.jpg" alt="">
+                        <span class="user-img"><img src="{{asset('assets/img/profiles/avatar-21.jpg')}}" alt="">
                             <span class="status online"></span></span>
                         <span>{{ Auth::user()->name }}n</span>
                     </a>

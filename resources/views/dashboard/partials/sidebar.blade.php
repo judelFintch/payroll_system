@@ -2,7 +2,6 @@
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
-                       
                         <li class="menu-title">
                             <span>Employees</span>
                         </li>

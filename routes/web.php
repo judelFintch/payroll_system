@@ -21,3 +21,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/all_employees', [App\Http\Controllers\EmployeesController::class, 'index'])->name('pages.employees.all');
 
+Route::get('/profile/{id}', [App\Http\Controllers\EmployeesController::class, 'show'])->name('pages.employees.profil');
+

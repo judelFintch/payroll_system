@@ -18,22 +18,22 @@ class EmployeesFactory extends Factory
     {
         return [
             //
-            'codeemployee'=>$this->faker->address,
+            'codeemployee'=>$this->faker->randomNumber($nbDigits = NULL, $strict = false),
             'firstname' => $this->faker->firstName,
             'secondname' =>$this->faker->firstName,
-            'birthday' =>$this->faker->address,
+            'birthday' =>$this->faker->dateTimeInInterval($startDate = '-30 years', $interval = '+ 5 days', $timezone = null),
             'gender'=> $this->faker->title,
             'addresse' =>$this->faker->address,
             'state'=>$this->faker->state,
             'country'=>$this->faker->country,
             'pincode'=>$this->faker->randomDigit,
             'phonenumber'=>$this->faker->phoneNumber,
+            'email'=>fake()->unique()->safeEmail(),
             'departement'=>$this->faker->address,
             'designation'=>$this->faker->address,
             'report_to'=>$this->faker->firstName,
+            'images'=>$this->faker->imageUrl($width = 640, $height = 480),
             'created_at'=>now()
-
-        
         ];
     }
 }
