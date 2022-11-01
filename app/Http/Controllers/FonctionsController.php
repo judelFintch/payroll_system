@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HolidaysController extends Controller
+class FonctionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,6 @@ class HolidaysController extends Controller
     public function index()
     {
         //
-
-        return view('dashboard.pages.holydays');
     }
 
     /**

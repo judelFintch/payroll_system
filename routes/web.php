@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 /*
@@ -18,7 +19,11 @@ Route::get('/', [MainController::class, 'index'])->name('main.login');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/employees/all_employees', [App\Http\Controllers\EmployeesController::class, 'index'])->name('pages.employees.all');
-Route::get('/employees/profile/{id}', [App\Http\Controllers\EmployeesController::class, 'show'])->name('pages.employees.profil');
-Route::post('/employees/store', [App\Http\Controllers\EmployeesController::class, 'store'])->name('pages.employees.store');
 
+
+
+Route::controller(EmployeesController::class)->group(function () {
+    Route::get('/employees/all_employees', 'index')->name('pages.employees.all');
+    Route::get('/employees/profile/{id}','show')->name('pages.employees.profil');
+    Route::post('/employees/store','store')->name('pages.employees.store');
+});

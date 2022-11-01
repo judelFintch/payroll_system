@@ -13,7 +13,7 @@
             </a>
 
             <div class="page-title-box">
-                <h3></h3>
+                <h3>{{ config('app.name')}}</h3>
             </div>
 
             <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa fa-bars"></i></a>
@@ -130,7 +130,7 @@
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                         <span class="user-img"><img src="{{asset('assets/img/profiles/avatar-21.jpg')}}" alt="">
                             <span class="status online"></span></span>
-                        <span>{{ Auth::user()->name }}n</span>
+                        <span>{{ Auth::user()->name }}</span>
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="profile">Mon profil</a>

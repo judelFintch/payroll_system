@@ -16,7 +16,6 @@ class EmployeesController extends Controller
         return view('dashboard.pages.employees.all',['employees'=>$employees]);
     }
 
-
     public function list_tab_employees(){
         return view('dashboard.pages.employees.all');
 

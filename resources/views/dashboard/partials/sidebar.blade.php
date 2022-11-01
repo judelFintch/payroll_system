@@ -11,13 +11,11 @@
                             <ul style="display: none;">
                                 <li><a class="" href="{{ route('pages.employees.all') }}">Tous les employés</a></li>
                                 <li><a class="" href="holidays">Vacances</a></li>
-                                <li><a class="" href="holidays">Sorties</a></li>
+                               
                                 <li><a class="" href="attendance_employee">Présences</a></li>
                                 <li><a class="" href="departments">Département</a></li>
                                 <li><a class="" href="designations">Designations</a></li>
-                                <li><a class="" href="timesheet">Empois du temps</a></li>
-                                <li><a class="" href="shift_scheduling">Shift & Schedule</a></li>
-                                <li><a class="" href="overtime">Overtime</a></li>
+                                
                             </ul>
                         </li>
                       
