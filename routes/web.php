@@ -35,3 +35,10 @@ Route::controller(HolydaysController::class)->group(function () {
     Route::get('/hoydays/detail/{id}','show')->name('pages.holydays.details');
     Route::post('/holydays/store','store')->name('pages.holydays.store');
 });
+
+
+Route::controller(AttendanceController::class)->group(function () {
+    Route::get('/attendance/all', 'index')->name('pages.attendance.index');
+    Route::get('/attendance/detail/{id}','show')->name('pages.attendance.details');
+    Route::post('/attendance/store','store')->name('pages.attendance.store');
+});

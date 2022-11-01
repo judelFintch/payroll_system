@@ -12,7 +12,7 @@
                                 <li><a class="" href="{{ route('pages.employees.all') }}">Tous les employés</a></li>
                                 <li><a class="" href="{{ route('pages.holydays.all')}}">Vacances</a></li>
                                
-                                <li><a class="" href="attendance_employee">Présences</a></li>
+                                <li><a class="" href="{{route('pages.attendance.index')}}">Présences</a></li>
                                 <li><a class="" href="departments">Département</a></li>
                                 <li><a class="" href="designations">Designations</a></li>
                                 
