@@ -30,9 +30,9 @@ class EmployeesFactory extends Factory
             'pincode'=>$this->faker->randomDigit,
             'phonenumber'=>$this->faker->phoneNumber,
             'email'=>fake()->unique()->safeEmail(),
-            'departement'=>$this->faker->firstName,
-            'fonction'=>$this->faker->firstName,
-            'company'=>$this->faker->firstName,
+            'departement'=>$this->faker->jobTitle,
+            'fonction'=>$this->faker->jobTitle,
+            'company'=>$this->faker->company,
             'report_to'=>$this->faker->firstName,
             'images'=>$this->faker->imageUrl($width = 640, $height = 480),
             'created_at'=>now()
