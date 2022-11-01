@@ -16,18 +16,20 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('codeemployee');
-            $table->string('firstname')->nullable();
-            $table->string('secondname')->nullable();
+            $table->string('firstname');
+            $table->string('secondname');
+            $table->string('communname')->nullable();
             $table->string('birthday')->date();
-            $table->string('gender')->nullable();
-            $table->string('addresse')->nullable();
+            $table->string('gender');
+            $table->string('addresse');
             $table->string('state')->nullable();
             $table->string('country')->nullable();
             $table->string('pincode')->nullable();
             $table->string('phonenumber')->nullable();
             $table->string('email')->nullable();
+            $table->string('company');
             $table->string('departement')->nullable();
-            $table->string('designation')->nullable();
+            $table->string('fonction')->nullable();
             $table->string('report_to')->nullable();
             $table->string('images')->nullable();
             $table->timestamps();

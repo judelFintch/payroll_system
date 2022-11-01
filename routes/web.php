@@ -18,8 +18,7 @@ Route::get('/', [MainController::class, 'index'])->name('main.login');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/all_employees', [App\Http\Controllers\EmployeesController::class, 'index'])->name('pages.employees.all');
-
-Route::get('/profile/{id}', [App\Http\Controllers\EmployeesController::class, 'show'])->name('pages.employees.profil');
+Route::get('/employees/all_employees', [App\Http\Controllers\EmployeesController::class, 'index'])->name('pages.employees.all');
+Route::get('/employees/profile/{id}', [App\Http\Controllers\EmployeesController::class, 'show'])->name('pages.employees.profil');
+Route::post('/employees/store', [App\Http\Controllers\EmployeesController::class, 'store'])->name('pages.employees.store');
 

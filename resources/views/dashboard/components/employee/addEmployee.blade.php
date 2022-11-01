@@ -2,90 +2,127 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Ajouter un Employer</h5>
+                <h5 class="modal-title">Ajouter un Employer DD</h5>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form method="POST" action="{{route('pages.employees.store')}}">
+                    @csrf
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label class="col-form-label">Nom <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text">
+                                <label class="col-form-label">Nom  <span class="text-danger">*</span></label>
+                                <input class="form-control" name="employee_first_name" type="text">
                             </div>
                         </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Post Nom  <span class="text-danger">*</span></label>
+                                <input class="form-control" name="employee_second_name" type="text">
+                            </div>
+                        </div>
+
+
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="col-form-label">Prenom</label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" name="employee_name" type="text">
                             </div>
                         </div>
                        
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="col-form-label">Email <span class="text-danger">*</span></label>
-                                <input class="form-control" type="email">
+                                <input class="form-control"  name="employee_email"type="email">
                             </div>
                         </div>
                        
                        
+
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="col-form-label">Matricule <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="employee_matricule" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Pays <span class="text-danger">*</span></label>
+                                <input type="text" name="employee_country" class="form-control">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="col-form-label">Date Naissance <span
                                         class="text-danger">*</span></label>
-                                <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
+                                <div class="cal-icon"><input class="form-control datetimepicker" name="employee_birthday" type="text"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Sexe <span class="text-danger">*</span></label>
+                                <select name="employee_sexe" class="select">
+                                    <option>Choisir le sexe</option>
+                                    <option>M</option>
+                                    <option>F</option>
+                                    
+                                </select>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="col-form-label">Phone </label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" name="employee_phone" type="text">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label class="col-form-label">Company</label>
-                                <select class="select">
-                                    <option value="">Global Technologies</option>
-                                    <option value="1">Delta Infotech</option>
+                                <label class="col-form-label">Addresse </label>
+                                <input class="form-control" name="employee_addresse" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Entreprise</label>
+                                <select class="select" name="employee_company">
+                                    
+                                    <option>Delta Infotech</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Department <span class="text-danger">*</span></label>
-                                <select class="select">
+                                <select name="employee_departement" class="select">
                                     <option>Select Department</option>
-                                    <option>Web Development</option>
-                                    <option>IT Management</option>
+                                    <option>Informatique</option>
+                                    <option>Communication</option>
+                                    <option>Maintenance</option>
                                     <option>Marketing</option>
                                 </select>
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Designation <span class="text-danger">*</span></label>
-                                <select class="select">
-                                    <option>Select Designation</option>
-                                    <option>Web Designer</option>
-                                    <option>Web Developer</option>
-                                    <option>Android Developer</option>
+                                <label>Fonction <span class="text-danger">*</span></label>
+                                <select name="employee_fonction" class="select">
+                                    <option>Select Department</option>
+                                    <option>Chef d'equipe</option>
+                                    <option>Travailleur Simple</option>
+                                    
                                 </select>
                             </div>
                         </div>
-                    </div>
-
                     
+                    </div>
                     <div class="submit-section">
-                        <button class="btn btn-primary submit-btn">Submit</button>
+                        <button class="btn btn-primary submit-btn">Ajouter</button>
                     </div>
                 </form>
             </div>
@@ -136,18 +173,21 @@
                                 <input class="form-control" value="johndoe" type="password">
                             </div>
                         </div>
+
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="col-form-label">Confirm Password</label>
                                 <input class="form-control" value="johndoe" type="password">
                             </div>
                         </div>
+
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
                                 <input type="text" value="FT-0001" readonly class="form-control floating">
                             </div>
                         </div>
+
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="col-form-label">Joining Date <span
@@ -155,6 +195,7 @@
                                 <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
                             </div>
                         </div>
+                        
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="col-form-label">Phone </label>

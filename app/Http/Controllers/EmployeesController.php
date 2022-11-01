@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employees;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
 
 class EmployeesController extends Controller
@@ -29,7 +30,29 @@ class EmployeesController extends Controller
        public function store(Request $request)
     {
         //
+       
+        Employees::create([
+            'firstname'=>$request->employee_first_name,
+            'codeemployee'=>$request->employee_matricule,
+            'secondname'=>$request->employee_second_name,
+            'communname'=>$request->employee_name,
+            'birthday'=>$request->employee_birthday,
+            'gender'=>$request->employee_sexe,
+            'addresse'=>$request->employee_addresse,
+            'state'=>$request->employee_first_name,
+            'country'=>$request->employee_first_name,
+            'pincode'=>$request->employee_first_name,
+            'phonenumber'=>$request->employee_first_name,
+            'email'=>$request->employee_email,
+            'company'=>$request->employee_company,
+            'departement'=>$request->employee_departement,
+            'fonction'=>$request->employee_fonction,
+            'report_to'=>$request->employee_fonction,
+            'images'=>'',
 
+        ]);
+
+        
     }
 
    
