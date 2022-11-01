@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\EmployeesController;
+use App\Http\Controllers\HolydaysController;
+use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\DepartementsController;
+use App\Http\Controllers\FonctionsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 /*
@@ -20,10 +24,14 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-
 Route::controller(EmployeesController::class)->group(function () {
     Route::get('/employees/all_employees', 'index')->name('pages.employees.all');
     Route::get('/employees/profile/{id}','show')->name('pages.employees.profil');
     Route::post('/employees/store','store')->name('pages.employees.store');
+});
+
+Route::controller(HolydaysController::class)->group(function () {
+    Route::get('/holydays/all', 'index')->name('pages.holydays.all');
+    Route::get('/hoydays/detail/{id}','show')->name('pages.holydays.details');
+    Route::post('/holydays/store','store')->name('pages.holydays.store');
 });

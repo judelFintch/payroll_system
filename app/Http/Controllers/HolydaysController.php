@@ -11,7 +11,7 @@ class HolydaysController extends Controller
     public function index()
     {
         //
-        return view('dashaboard.pages.holydays.index');
+        return view('dashboard.pages.holydays.index');
     }
 
     public function create()
