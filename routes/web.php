@@ -42,3 +42,18 @@ Route::controller(AttendanceController::class)->group(function () {
     Route::get('/attendance/detail/{id}','show')->name('pages.attendance.details');
     Route::post('/attendance/store','store')->name('pages.attendance.store');
 });
+
+
+Route::controller(DepartementsController::class)->group(function () {
+    Route::get('/departement/all', 'index')->name('pages.departement.index');
+    Route::get('/departement/detail/{id}','show')->name('pages.departement.details');
+    Route::post('/departement/store','store')->name('pages.departement.store');
+});
+
+
+Route::controller(FonctionsController::class)->group(function () {
+    Route::get('/fonction/all', 'index')->name('pages.fonction.index');
+    Route::get('/fonction/detail/{id}','show')->name('pages.fonction.details');
+    Route::post('/fonction/store','store')->name('pages.fonction.store');
+});
+

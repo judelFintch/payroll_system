@@ -16,13 +16,15 @@
         <div class="row">
             <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                 <div class="card dash-widget">
+                <a href="{{route('pages.departement.index')}}">
                     <div class="card-body">
                         <span class="dash-widget-icon"><i class="fa fa-cubes"></i></span>
                         <div class="dash-widget-info">
-                            <h3>0</h3>
-                            <span>Company</span>
-                        </div>
+                            <h3>{{ $departements->count() }}</h3>
+                            <span>Departements</span>
+                        </div>  
                     </div>
+                </a>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
@@ -30,7 +32,7 @@
                     <div class="card-body">
                         <span class="dash-widget-icon"><i class="fa fa-usd"></i></span>
                         <div class="dash-widget-info">
-                            <h3>4450</h3>
+                            <h3>0</h3>
                             <span>Budjet Mensuel</span>
                         </div>
                     </div>
@@ -42,7 +44,7 @@
                     <div class="card-body">
                         <span class="dash-widget-icon"><i class="fa fa-usd"></i></span>
                         <div class="dash-widget-info">
-                            <h3>350</h3>
+                            <h3>0</h3>
                             <span>Total Depense</span>
                         </div>
                     </div>
@@ -50,15 +52,17 @@
             </div>
            
             <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <a href="{{route('pages.employees.all')}}">
                 <div class="card dash-widget">
                     <div class="card-body">
                         <span class="dash-widget-icon"><i class="fa fa-user"></i></span>
                         <div class="dash-widget-info">
-                            <h3>218</h3>
+                            <h3>{{ $employees->count() }}</h3>
                             <span>Employés</span>
                         </div>
                     </div>
                 </div>
+            </a>
             </div>
         </div>
     </div>

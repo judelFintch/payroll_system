@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employees;
-use GuzzleHttp\Promise\Create;
+
 use Illuminate\Http\Request;
 
 class EmployeesController extends Controller
 {
-    
+   
     public function index()
     {
         //
@@ -29,6 +29,7 @@ class EmployeesController extends Controller
        public function store(Request $request)
     {
         //
+        $chemin_image = $request->employee_image->store('employees');
        
         Employees::create([
             'firstname'=>$request->employee_first_name,
@@ -47,11 +48,11 @@ class EmployeesController extends Controller
             'departement'=>$request->employee_departement,
             'fonction'=>$request->employee_fonction,
             'report_to'=>$request->employee_fonction,
-            'images'=>'',
+            'images'=>$chemin_image,
 
         ]);
 
-        
+    return redirect()->route('pages.employees.all');
     }
 
    
@@ -77,4 +78,5 @@ class EmployeesController extends Controller
     {
         //
     }
+	
 }

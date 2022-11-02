@@ -109,7 +109,7 @@
                                 <td>
                                     <h2 class="table-avatar">
                                         <a class="avatar avatar-xs" href="profile"><img alt=""
-                                                src="https://smarthr-ci.dreamguystech.com/template/blue/public/assets/img/profiles/avatar-04.jpg"></a>
+                                                src="{{$employee->images}}"></a>
                                         <a href="profile">{{$employee->firstname}} {{$employee->secondname}}</a>
                                     </h2>
                                 </td>

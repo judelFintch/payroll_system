@@ -5,9 +5,11 @@
         <div class="profile-widget">
             <div class="profile-img">
                 <a href="{{ route('pages.employees.profil', ['id' =>$employee->id]) }}" class="avatar"><img
-                        src="{{ $employee->images }}"
+                        src="{{ asset('storage/'.$employee->images) }}"
                         alt=""></a>
+                      
             </div>
+            {{ $employee->images }}
             <div class="dropdown profile-action">
                 <a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="material-icons">more_vert</i></a>
@@ -22,6 +24,7 @@
             <div class="small text-muted">{{ $employee->departement }}</div>
         </div>
     </div>
+   
     @endforeach
     @else
 

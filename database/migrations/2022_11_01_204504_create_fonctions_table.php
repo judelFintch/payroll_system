@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('fonctions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('fonction');
+            $table->string('departement');
         });
     }
 

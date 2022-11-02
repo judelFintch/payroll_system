@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Departments;
+use App\Models\Employees;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pages.home');
+        $employees=Employees::all();
+        $departements=Departments::all();
+        
+        return view('dashboard.pages.home', compact('employees','departements'));
     }
 }

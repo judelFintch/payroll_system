@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="{{route('pages.employees.store')}}">
+                <form method="POST" action="{{route('pages.employees.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-sm-6">
@@ -93,6 +93,14 @@
                                     
                                     <option>Delta Infotech</option>
                                 </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-form-label">image</label>
+                                <input type="file" name="employee_image" class="form-control">
+                                
                             </div>
                         </div>
                         <div class="col-md-6">
