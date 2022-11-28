@@ -7,6 +7,7 @@ use App\Http\Controllers\DepartementsController;
 use App\Http\Controllers\FonctionsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\OrganisationsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,4 +57,12 @@ Route::controller(FonctionsController::class)->group(function () {
     Route::get('/fonction/detail/{id}','show')->name('pages.fonction.details');
     Route::post('/fonction/store','store')->name('pages.fonction.store');
 });
+
+
+Route::controller(OrganisationsController::class)->group(function () {
+    Route::get('/organisation/all', 'index')->name('pages.organisation.index');
+    Route::get('/organisation/detail/{id}','show')->name('pages.organisation.details');
+    Route::post('/organisation/store','store')->name('pages.organisation.store');
+});
+
 

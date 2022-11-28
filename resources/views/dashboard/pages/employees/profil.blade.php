@@ -23,7 +23,7 @@
                             <div class="profile-img-wrap">
                                 <div class="profile-img">
                                     <a href="#"><img alt=""
-                                            src="{{ $employee->images}}"></a>
+                                            src="https://picsum.photos/200/300?nocache=<?php echo microtime(); ?>"></a>
                                 </div>
                             </div>
                             <div class="profile-basic">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Departments;
 use App\Models\Employees;
+use App\Models\Organisations;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,7 +28,8 @@ class HomeController extends Controller
     {
         $employees=Employees::all();
         $departements=Departments::all();
+        $organisations=Organisations::all();
         
-        return view('dashboard.pages.home', compact('employees','departements'));
+        return view('dashboard.pages.home', compact('employees','departements','organisations'));
     }
 }

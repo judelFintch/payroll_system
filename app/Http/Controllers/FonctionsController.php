@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Departments;
 use App\Models\Fonctions;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class FonctionsController extends Controller
     {
         //
         $fonctions=Fonctions::all();
-        return view("dashboard.pages.fonctions.index", compact('fonctions'));
+        $departements=Departments::all();
+        return view("dashboard.pages.fonctions.index", compact('fonctions','departements'));
     }
 
     public function create()

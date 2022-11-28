@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Ajouter un Employer DD</h5>
+                <h5 class="modal-title">Ajouter un Employer</h5>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -107,11 +107,10 @@
                             <div class="form-group">
                                 <label>Department <span class="text-danger">*</span></label>
                                 <select name="employee_departement" class="select">
-                                    <option>Select Department</option>
-                                    <option>Informatique</option>
-                                    <option>Communication</option>
-                                    <option>Maintenance</option>
-                                    <option>Marketing</option>
+                                <option>Select Department</option>
+                                    @foreach($departements as $departement)
+                                        <option>{{$departement->departement}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -121,8 +120,10 @@
                                 <label>Fonction <span class="text-danger">*</span></label>
                                 <select name="employee_fonction" class="select">
                                     <option>Select Department</option>
-                                    <option>Chef d'equipe</option>
-                                    <option>Travailleur Simple</option>
+                                    @foreach($fonctions as $fonction)
+                                        <option>{{$fonction->fonction}}</option>
+                                    @endforeach
+                                  
                                     
                                 </select>
                             </div>

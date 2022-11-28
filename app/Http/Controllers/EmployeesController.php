@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Departments;
 use App\Models\Employees;
-
+use App\Models\Fonctions;
 use Illuminate\Http\Request;
 
 class EmployeesController extends Controller
@@ -13,7 +14,9 @@ class EmployeesController extends Controller
     {
         //
         $employees=Employees::all();
-        return view('dashboard.pages.employees.all',['employees'=>$employees]);
+        $departements=Departments::all();
+        $fonctions=Fonctions::all();
+        return view('dashboard.pages.employees.all', compact('employees','departements','fonctions'));
     }
 
     public function list_tab_employees(){
@@ -30,7 +33,7 @@ class EmployeesController extends Controller
     {
         //
         $chemin_image = $request->employee_image->store('employees');
-       
+    
         Employees::create([
             'firstname'=>$request->employee_first_name,
             'codeemployee'=>$request->employee_matricule,

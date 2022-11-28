@@ -2,6 +2,7 @@
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
+                        
                         <li class="menu-title">
                             <span>Employees</span>
                         </li>
@@ -98,7 +99,7 @@
                             <a href="#"><i class="la la-table"></i> <span> Configuration </span> <span
                                     class="menu-arrow"></span></a>
                             <ul style="display: none;">
-                                <li><a class="" href="table_basic">Basic Tables </a></li>
+                                <li><a class="" href="{{ route('pages.organisation.index')}}">Organisation </a></li>
                                 <li><a class="" href="data_tables">Data Table </a></li>
                             </ul>
                         </li>

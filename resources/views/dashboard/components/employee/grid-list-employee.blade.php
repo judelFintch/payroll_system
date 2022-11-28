@@ -5,11 +5,12 @@
         <div class="profile-widget">
             <div class="profile-img">
                 <a href="{{ route('pages.employees.profil', ['id' =>$employee->id]) }}" class="avatar"><img
-                        src="{{ asset('storage/'.$employee->images) }}"
-                        alt=""></a>
-                      
+                        src="https://picsum.photos/200/300?nocache=<?php echo microtime(); ?>"
+                        alt="">
+                </a>
+        
             </div>
-            {{ $employee->images }}
+            
             <div class="dropdown profile-action">
                 <a href="#" class="action-icon dropdown-toggle" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="material-icons">more_vert</i></a>
