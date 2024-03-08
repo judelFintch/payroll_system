@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.login')
+@extends('layouts.login')
 @section('content')
 
 <div class="account-box">

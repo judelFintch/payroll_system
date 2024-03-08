@@ -10,11 +10,11 @@
                             <a href="#" class="noti-dot"><i class="la la-user"></i> <span> Employés</span> <span
                                     class="menu-arrow"></span></a>
                             <ul style="display: none;">
-                                <li><a class="" href="{{ route('pages.employees.all') }}">Tous les employés</a></li>
-                                <li><a class="" href="{{ route('pages.holydays.all')}}">Vacances</a></li>
-                                <li><a class="" href="{{route('pages.attendance.index')}}">Présences</a></li>
-                                <li><a class="" href="{{route('pages.departement.index')}}">Département</a></li>
-                                <li><a class="" href="{{route('pages.fonction.index')}}">Fonction</a></li>
+                                <li><a class="" href="">Tous les employés</a></li>
+                                <li><a class="" href="">Vacances</a></li>
+                                <li><a class="" href="">Présences</a></li>
+                                <li><a class="" href="">Département</a></li>
+                                <li><a class="" href="">Fonction</a></li>
                                 
                             </ul>
                         </li>
@@ -99,7 +99,7 @@
                             <a href="#"><i class="la la-table"></i> <span> Configuration </span> <span
                                     class="menu-arrow"></span></a>
                             <ul style="display: none;">
-                                <li><a class="" href="{{ route('pages.organisation.index')}}">Organisation </a></li>
+                                <li><a class="" href="">Organisation </a></li>
                                 <li><a class="" href="data_tables">Data Table </a></li>
                             </ul>
                         </li>

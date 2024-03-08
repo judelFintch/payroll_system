@@ -35,8 +35,8 @@
                             <div class="container-fluid">
                             <body>
                                 <div class="main-wrapper">
-                                    @include('dashboard.partials.topbar')
-                                    @include('dashboard.partials.sidebar')
+                                    @include('partials.topbar')
+                                    @include('partials.sidebar')
                                 @yield('content')
                                 </div>
                             </div>
